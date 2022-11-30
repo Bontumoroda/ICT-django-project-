@@ -1,0 +1,30 @@
+{% extends 'main/main.html' %}
+{% block content %}
+{% include 'main/status.html' %}
+<div class="row">
+    <div class="card">
+        <div class="">
+            <div class="card card-body">
+                <table class="table table-sm">
+                    <tr class="tab-title">
+                        <th>Category</th>                        
+                        <th>Status</th>
+                        <th>Quantity</th>
+                        <th>cumpas</th>
+                        <th>Details</th>
+                    </tr>
+                    {% for order in order %}
+                    <tr class="tab-body">
+                    <td>{{order.category}}</td>
+                     <td>{{order.status}}</td>
+                     <td>{{order.quantity}}</td>
+                     <td>{{order.customer.Cupmas}}</td>
+                     <td><a class="btn btn-sm btn-info" href="{% url 'OrderView' order.id  %}">details</a></td>
+                    </tr>
+                    {% endfor %}
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

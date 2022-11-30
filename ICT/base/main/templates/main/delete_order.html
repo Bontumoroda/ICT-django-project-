@@ -1,0 +1,17 @@
+
+{% extends 'main/main.html' %}
+{% block content %}
+<div class="row">
+    <div class=" col-md-12" >
+        <div class="card card-body ">
+            <p>Are you suer you went to delete '{{order.service.name}}' maintenance 
+                order in '{{order.status}}'  status ?</p>
+            <form method="POST" action="">
+                {% csrf_token %}
+                <a class="btn btn-sm btn-warning" href="{% url 'OrderLists' %}">cancle</a>
+                <input class="btn btn-sm btn-danger"  type="submit" name="submit" value="delete">
+            </form>
+        </div>
+    </div>
+</div>    
+{% endblock%}

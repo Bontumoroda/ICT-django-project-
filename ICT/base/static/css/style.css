@@ -1,0 +1,54 @@
+body{
+    background-color: #fff;
+}
+#logo{
+    width: 200px;
+    height: 40px;
+}
+.mynavbar{
+    color: #f0f5f5 !important;
+}
+
+.navbar{
+    background-color: #335599 !important;
+    color: #f0f5f5 !important;
+    z-index: 1000 !important;
+
+}
+.table-font{
+    color: rgb(33, 33, 239);
+}
+.status-title{
+    color: #f0f5f5;
+    padding: 7px;
+    font-weight: bold;
+    font-size: 15px;
+    background-color: #335599 !important;
+
+}
+.status-conten{
+    background-color: #335599 !important;
+}
+.status-body{
+       color: #005a84;
+       font-size: 12px;
+
+}
+.theader{
+    background-color: #335599 !important;
+    color: #f0f5f5;
+    padding: 7px;
+    font-weight: bold;
+    font-size: 18px;
+}
+.tab-title{
+    background-color: #335599 !important;
+    color: #f0f5f5;
+    padding: 7px;
+    font-weight: bold;
+    font-size: 18px;
+}
+.tab-body{
+    color: #005a84; 
+    font-size: 12px;
+}

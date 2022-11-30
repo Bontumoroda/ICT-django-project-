@@ -1,0 +1,35 @@
+{% if request.user.is_authenticated %}
+<h1>{{request.user}}</h1>
+<a href="{% url 'logout' %}">logout</a>
+{% else %}
+<a href="{% url 'login' %}">login</a>
+{% endif %}
+    <a href="{% url 'create_order' %}">add order</a>
+<table>
+    <tr>
+        <th>name</th>
+        <th> equipment</th>
+        <th>catagory</th>
+        <th>discribtion</th>
+        <th></th>
+
+    </tr>
+    {% for order in order %}
+    <tr>
+        <td>{{order.customer.user.first_name}}</td>
+        <td>{{order.service.name}}</td>
+        <td>{{order.category}}</td>
+        <td>{{order.discription}}</td>
+        <td> <a href="{% url 'OrderView' order.id %}">view</a></td>
+        <td> <a href="{% url 'OrderUpdate' order.id %}">Edit</a></td>
+        <td> <a href="{% url 'OrderDelete' order.id %}">Delete</a></td>
+
+
+
+
+    </tr>
+    {% empty %}
+       <h1>No lists </h1>
+    {% endfor %}
+    
+</table>

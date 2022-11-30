@@ -1,0 +1,33 @@
+{% extends 'main/main.html' %}
+{% block content %}
+<td><a class="btn btn-sm btn-primary" href="{% url 'OrderLists'  %}">Back</a></td>
+{% load crispy_forms_tags %}
+<div class="container mt-3" style="width:85%; font-size:12px">
+     <form method="POST" action="" class="card p-3 mt-3" autocomplete="off">
+        {% csrf_token %}
+
+        <div class="row">
+            <div class="col-6">
+                {{form.service|as_crispy_field}}
+            </div>
+           <div class="col-6">
+                {{form.category|as_crispy_field}}
+            </div>
+            <div class="col-6">
+                {{form.quantity|as_crispy_field}}
+          </div>
+          <div class="col-6">
+                 {{form.status|as_crispy_field}}
+          </div>
+        </div>    
+
+            <div class="col row-3">
+                 {{form.discription|as_crispy_field}}
+            </div>
+           
+        <input type="submit" value="submit">
+    </form>
+    
+</div>
+
+{% endblock %}

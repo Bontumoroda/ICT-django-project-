@@ -1,0 +1,36 @@
+
+{% extends 'main/main.html' %}
+{% block content %}
+<td><a class="btn btn-sm btn-primary" href="{% url 'customerorder'  %}">Back</a></td>
+<div class="row">
+    <div class="card">
+        <div class="">
+            <div class="card card-body">
+                <table class="table table-sm">
+                    <tr class="tab-title">
+                        <th>First_name</th>                        
+                        <th>Last_name</th>
+                        <th>Section</th>
+                        <th>Biulding</th>
+                        <th>Office_no</th>
+                        <th>Equipment</th>
+                        <th>Discription</th>
+                        <th>Date_created</th>
+                    </tr>
+                    <tr class="tab-body">
+                    <td>{{order.customer.user.first_name}}</td>
+                     <td>{{order.customer.user.last_name}}</td>
+                     <td>{{order.customer.section}}</td>
+                     <td>{{order.customer.bulding_name}}</td>
+                     <td>{{order.customer.office_no}}</td>
+                     <td>{{order.service.name}}</td>
+                     <td>{{order.discription}}</td>
+                     <td>{{order.date_created}}</td>
+                    
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

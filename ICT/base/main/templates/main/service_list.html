@@ -1,0 +1,27 @@
+{% extends 'main/main.html' %}
+{% block content %}
+<div class="row">
+    <div class="card">
+        <div class="">
+            <div class="card card-body">
+                <table class="table table-sm table-font">
+                    <tr class="tab-title">
+                        <th>Equipment Name </th>                        
+                        <th>Catagory</th>
+                        <th>Discription</th>
+                        <th></th>
+
+                    </tr>
+                    {% for service in service_list %}
+                    <tr class="tab-body">
+                      <td>{{service.name}}</td>
+                      <td>{{service.category}}</td>
+                      <td>{{service.discription}}</td>
+                    </tr>
+                    {% endfor %}
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock%}
